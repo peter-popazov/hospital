@@ -9,9 +9,7 @@ import lombok.Setter;
 import java.time.ZonedDateTime;
 
 @Entity
-@Table(name = "visits", indexes = {
-        @Index(name = "idx_start_end_dates", columnList = "startDateTime, endDateTime"),
-})
+@Table(name = "visits")
 @Getter
 @Setter
 @NoArgsConstructor

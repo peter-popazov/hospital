@@ -5,11 +5,11 @@ import org.peter.hospital.dto.CreateVisitRequest;
 import org.peter.hospital.entity.Doctor;
 import org.peter.hospital.entity.Patient;
 import org.peter.hospital.entity.Visit;
-import org.peter.hospital.exceptions.DoctorNotFoundException;
-import org.peter.hospital.exceptions.PatientNotFoundException;
-import org.peter.hospital.repositories.DoctorRepository;
-import org.peter.hospital.repositories.PatientRepository;
-import org.peter.hospital.repositories.VisitRepository;
+import org.peter.hospital.exception.DoctorNotFoundException;
+import org.peter.hospital.exception.PatientNotFoundException;
+import org.peter.hospital.repository.DoctorRepository;
+import org.peter.hospital.repository.PatientRepository;
+import org.peter.hospital.repository.VisitRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

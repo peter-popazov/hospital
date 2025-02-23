@@ -21,18 +21,12 @@ public class PatientController {
 
     @GetMapping
     public ResponseEntity<PatientResponse> getPatients(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size,
-            @RequestParam String search,
-            @RequestParam List<Long> doctorIds
+            @RequestParam(required = false, defaultValue = "0") int page,
+            @RequestParam(required = false ,defaultValue = "10") int size,
+            @RequestParam(required = false) String search,
+            @RequestParam(required = false) List<Long> doctorIds
     ) {
-        PatientResponse response;
-        try {
-            response =  patientService.getPatients(page, size, search, doctorIds);
-        } catch (IllegalArgumentException e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(patientService.getPatients(page, size, search, doctorIds), HttpStatus.OK);
     }
 
 }

@@ -1,4 +1,4 @@
-package org.peter.hospital.exceptions;
+package org.peter.hospital.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 
